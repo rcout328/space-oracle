@@ -11,7 +11,7 @@ export function CallToActionComponent() {
           <div className="flex flex-col md:flex-row items-center">
             <div className="md:w-1/2 p-12 text-white">
               <h2 className="text-4xl md:text-5xl font-serif mb-6">
-                Let's Work Together
+                Let&apos;s Work Together
               </h2>
               <p className="text-lg mb-8">
                 Ready to turn your dream home into reality? Our team of experts is here to guide you through every step of the process.

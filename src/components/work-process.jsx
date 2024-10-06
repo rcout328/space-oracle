@@ -25,7 +25,7 @@ export function WorkProcess() {
             className="absolute -bottom-10 -right-10 w-24 h-24 rounded-full border-4 border-white object-cover" />
         </div>
         <div className="w-full lg:w-1/2 space-y-6">
-          <h2 className="text-4xl font-serif text-green-800">Our Work Process make your dream Home</h2>
+          <h2 className="text-4xl font-serif text-green-800">Our Work Process makes your dream Home</h2>
           <div className="space-y-4">
             {[
               {
@@ -53,7 +53,7 @@ export function WorkProcess() {
             ))}
           </div>
           <Button className="bg-yellow-500 text-gray-800 hover:bg-yellow-600 rounded-full px-6 py-3 font-semibold">
-            Let's Start With Us
+            Let&apos;s Start With Us
             <ArrowUpRight className="ml-2 h-5 w-5" />
           </Button>
         </div>

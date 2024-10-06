@@ -31,7 +31,7 @@ export function AboutUsComponent() {
             <h3 className="text-2xl font-semibold text-green-800 mb-4">Our Mission</h3>
             <p className="text-gray-600 mb-4">
               We strive to redefine luxury living by creating homes that seamlessly blend 
-              aesthetics with functionality, always prioritizing our clients' dreams and 
+              aesthetics with functionality, always prioritizing our clients&apos; dreams and 
               the environment.
             </p>
             <ul className="space-y-2">
