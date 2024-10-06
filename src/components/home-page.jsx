@@ -13,7 +13,7 @@ export function HomePage() {
   return (
     <div className="min-h-screen bg-white text-gray-800">
       <header className="container mx-auto px-4 py-6 flex items-center justify-between">
-        <div className="text-3xl font-bold text-green-800">ʌ</div>
+        <div className="text-3xl font-bold text-green-800">Space Oracle</div>
         <nav className="hidden md:flex space-x-8">
           <Link className="hover:text-green-800" href="#">Home</Link>
           <Link className="hover:text-green-800" href="#">Properties</Link>
