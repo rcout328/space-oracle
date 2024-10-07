@@ -8,7 +8,7 @@ import { Footer } from "./footer"
 const teamMembers = [
   { name: "Jane Doe", role: "CEO", image: "https://leonardo-cdn.b-cdn.net/wp-content/uploads/2024/05/Default_Insanity_1.jpg", quote: "Our mission is to revolutionize the real estate industry." },
   { name: "John Smith", role: "CTO", image: "https://leonardo-cdn.b-cdn.net/wp-content/uploads/2024/05/Default_Insanity_1.jpg", quote: "We're leveraging technology to create seamless experiences." },
-  { name: "Alice Johnson", role: "Head of Sales", image: "https://leonardo-cdn.b-cdn.net/wp-content/uploads/2024/05/Default_Insanity_1.jpg", quote: "Our clients' satisfaction is our top priority." },
+  { name: "Alice Johnson", role: "Head of Sales", image: "https://leonardo-cdn.b-cdn.net/wp-content/uploads/2024/05/Default_Insanity_1.jpg", quote: "Our clients&apos; satisfaction is our top priority." },
   { name: "Bob Williams", role: "Lead Designer", image: "https://leonardo-cdn.b-cdn.net/wp-content/uploads/2024/05/Default_Insanity_1.jpg", quote: "We believe in creating spaces that inspire." },
 ]
 
