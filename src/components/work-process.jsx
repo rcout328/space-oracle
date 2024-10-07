@@ -20,10 +20,7 @@ export function WorkProcess() {
                 <span className="text-xs md:text-sm">Over<br />Experience</span>
               </div>
             </div>
-            <img
-              src="https://cdn.leonardo.ai/users/5ade5a1e-6a85-4754-bc1b-5d2a113caee4/generations/eed6fd05-ab81-463e-a743-d5870f5354a1/Leonardo_Phoenix_Create_a_hyperrealistic_HDR_image_of_a_modern_2.jpg"
-              alt="House floor plan"
-              className="absolute -bottom-10 -right-10 w-16 h-16 md:w-24 md:h-24 rounded-full border-4 border-white object-cover hidden md:block" />
+         
           </div>
           <div className="w-full lg:w-1/2 space-y-4 md:space-y-6">
             <h2 className="text-3xl md:text-4xl font-serif text-green-800">Our Work Process makes your dream Home</h2>
