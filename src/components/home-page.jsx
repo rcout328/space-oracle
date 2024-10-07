@@ -1,3 +1,5 @@
+'use client'
+
 import Link from 'next/link'
 import { Button } from "@/components/ui/button"
 import { ChevronDown, ArrowUpRight } from "lucide-react"
@@ -5,39 +7,16 @@ import { PlatformFeatures } from '@/components/platform-features'
 import { WorkProcess } from '@/components/work-process'
 import { PropertyListings } from '@/components/property-listings' // Import PropertyListings component
 import { LatestProjects } from '@/components/latest-projects' // Import LatestProjects component
-import { AboutUsComponent } from '@/components/about-us' // Import AboutUsComponent
+
 import { CallToActionComponent } from '@/components/call-to-action' // Import CallToAction component
 import { Footer } from '@/components/footer' // Import the new Footer component
+import Header from './Header'
+import { AboutUsComponent } from './aboutus'
 
 export function HomePage() {
   return (
     <div className="min-h-screen bg-white text-gray-800">
-      <header className="container mx-auto px-4 py-6 flex items-center justify-between">
-        <div className="text-3xl font-bold text-green-800">Space Oracle</div>
-        <nav className="hidden md:flex space-x-8">
-          <Link className="hover:text-green-800" href="#">Home</Link>
-          <Link className="hover:text-green-800" href="#">Properties</Link>
-          <div className="relative group">
-            <button className="flex items-center hover:text-green-800">
-              Buy <ChevronDown className="ml-1 h-4 w-4" />
-            </button>
-          </div>
-          <div className="relative group">
-            <button className="flex items-center hover:text-green-800">
-              Sell <ChevronDown className="ml-1 h-4 w-4" />
-            </button>
-          </div>
-          <div className="relative group">
-            <button className="flex items-center hover:text-green-800">
-              Rent <ChevronDown className="ml-1 h-4 w-4" />
-            </button>
-          </div>
-        </nav>
-        <div className="flex items-center space-x-4">
-          <Button variant="ghost" className="text-gray-800 hover:text-green-800">Log In</Button>
-          <Button className="bg-yellow-500 text-gray-800 hover:bg-yellow-600">Get Started</Button>
-        </div>
-      </header>
+     <Header/>
       <main className="container mx-auto px-4 py-16">
         <div className="relative z-10 text-center mb-16">
           <h1 className="text-6xl font-serif mb-4 text-green-800">

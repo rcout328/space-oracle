@@ -1,60 +1,113 @@
 'use client'
 
-import { ArrowUpRight, CheckCircle, Users, Award, Briefcase, Home, DollarSign, Clock } from 'lucide-react'
 import { Button } from "@/components/ui/button"
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
+import { ChevronDown, Users, Building, Award, TrendingUp, ChevronRight, Star, Globe, Shield } from 'lucide-react'
+import Header from "./Header"
+import { Footer } from "./footer"
 
-export function AboutUsComponent() {
+const teamMembers = [
+  { name: "Jane Doe", role: "CEO", image: "https://leonardo-cdn.b-cdn.net/wp-content/uploads/2024/05/Default_Insanity_1.jpg", quote: "Our mission is to revolutionize the real estate industry." },
+  { name: "John Smith", role: "CTO", image: "https://leonardo-cdn.b-cdn.net/wp-content/uploads/2024/05/Default_Insanity_1.jpg", quote: "We're leveraging technology to create seamless experiences." },
+  { name: "Alice Johnson", role: "Head of Sales", image: "https://leonardo-cdn.b-cdn.net/wp-content/uploads/2024/05/Default_Insanity_1.jpg", quote: "Our clients' satisfaction is our top priority." },
+  { name: "Bob Williams", role: "Lead Designer", image: "https://leonardo-cdn.b-cdn.net/wp-content/uploads/2024/05/Default_Insanity_1.jpg", quote: "We believe in creating spaces that inspire." },
+]
+
+const achievements = [
+  { icon: Users, title: "10,000+", description: "Happy Clients" },
+  { icon: Building, title: "500+", description: "Properties Sold" },
+  { icon: Award, title: "50+", description: "Industry Awards" },
+  { icon: TrendingUp, title: "98%", description: "Customer Satisfaction" },
+]
+
+const timeline = [
+  { year: "2010", event: "Space Oracle founded" },
+  { year: "2015", event: "Expanded to 10 major cities" },
+  { year: "2018", event: "Launched innovative AI-powered property matching" },
+  { year: "2020", event: "Achieved 1 million user milestone" },
+  { year: "2023", event: "Introduced virtual reality property tours" },
+]
+
+export function AboutUst() {
   return (
-    <div className="bg-white py-8 md:py-16">
-      <div className="max-w-6xl mx-auto px-4">
-        <div className="flex flex-col md:flex-row justify-between items-start mb-8 md:mb-12">
-          <h2 className="text-4xl md:text-5xl font-serif mb-6 md:mb-0 text-green-800">About Us</h2>
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-3 w-full md:w-auto">
-            {[
-              { icon: DollarSign, text: "No Brokerage" },
-              { icon: Home, text: "Direct from Owner" },
-              { icon: Clock, text: "24/7 Support" },
-              { icon: Users, text: "Verified Listings" },
-              { icon: Award, text: "Premium Properties" },
-              { icon: Briefcase, text: "Expert Guidance" }
-            ].map((item, index) => (
-              <div key={index} className="flex items-center bg-gray-100 rounded-full px-3 py-2">
-                <item.icon className="w-4 h-4 md:w-5 md:h-5 text-green-800 mr-2" />
-                <span className="text-xs md:text-sm font-semibold text-gray-800">{item.text}</span>
-              </div>
+    <div className="min-h-screen bg-gray-50">
+      <Header/>
+      <main className="container mx-auto px-4 py-12">
+        <section className="mb-16 text-center">
+          <h1 className="text-5xl font-bold text-green-800 mb-6">About Space Oracle</h1>
+          <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
+            Space Oracle is a leading real estate company dedicated to helping people find their perfect homes and make smart property investments. With our innovative technology and expert team, we're revolutionizing the way people buy, sell, and rent properties.
+          </p>
+          <Button className="bg-yellow-500 text-black font-semibold hover:bg-green-900">
+            Learn More About Our Mission <ChevronRight className="ml-2 h-5 w-5" />
+          </Button>
+        </section>
+
+        <section className="mb-16">
+          <h2 className="text-3xl font-bold text-green-800 mb-8 text-center">Our Team</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {teamMembers.map((member, index) => (
+              <Card key={index} className="overflow-hidden hover:shadow-lg transition-shadow">
+                <img src={member.image} alt={member.name} className="w-full h-48 object-cover" />
+                <CardContent className="p-4">
+                  <h3 className="text-xl font-semibold text-green-800">{member.name}</h3>
+                  <p className="text-gray-600 mb-2">{member.role}</p>
+                  <p className="text-sm italic text-gray-500">"{member.quote}"</p>
+                  <p className="text-gray-600">{member.role}</p>
+                </CardContent>
+              </Card>
             ))}
           </div>
-        </div>
+        </section>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 mb-8 md:mb-12">
-          <div className="bg-gray-100 rounded-lg p-4 md:p-6">
-            <h3 className="text-xl md:text-2xl font-semibold text-green-800 mb-4">Our Mission</h3>
-            <p className="text-gray-600 mb-4 text-sm md:text-base">
-              We strive to redefine luxury living by creating homes that seamlessly blend 
-              aesthetics with functionality, always prioritizing our clients&apos; dreams and 
-              the environment.
-            </p>
-            <ul className="space-y-2">
-              {['Client-Centric Approach', 'Sustainable Practices', 'Innovative Designs'].map((item, index) => (
-                <li key={index} className="flex items-center text-gray-700 text-sm md:text-base">
-                  <CheckCircle className="mr-2 text-green-600" size={16} />
-                  {item}
-                </li>
-              ))}
-            </ul>
+        <section className="mb-16">
+          <h2 className="text-3xl font-bold text-green-800 mb-8">Our Achievements</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {achievements.map((achievement, index) => (
+              <Card key={index}>
+                <CardHeader>
+                  <achievement.icon className="h-12 w-12 text-yellow-500 mb-4" />
+                  <CardTitle className="text-4xl font-bold text-green-800">{achievement.title}</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-gray-600">{achievement.description}</p>
+                </CardContent>
+              </Card>
+            ))}
           </div>
-          <div className="bg-green-800 rounded-lg p-4 md:p-6 text-white">
-            <h3 className="text-xl md:text-2xl font-semibold mb-4">Our Vision</h3>
-            <p className="mb-4 text-sm md:text-base">
-              To be the leading name in luxury real estate, known for our unparalleled quality, 
-              innovative designs, and commitment to creating homes that stand the test of time.
-            </p>
-            <Button className="bg-yellow-500 text-gray-800 hover:bg-yellow-600 text-sm md:text-base">
-              Learn More <ArrowUpRight className="ml-2 h-4 w-4" />
-            </Button>
+        </section>
+
+        <section className="bg-green-50 rounded-lg p-8 mb-16">
+          <h2 className="text-3xl font-bold text-green-800 mb-4">Our Values</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div>
+              <h3 className="text-xl font-semibold text-green-800 mb-2">Integrity</h3>
+              <p className="text-gray-600">We believe in honest, transparent dealings with all our clients and partners.</p>
+            </div>
+            <div>
+              <h3 className="text-xl font-semibold text-green-800 mb-2">Innovation</h3>
+              <p className="text-gray-600">We continuously strive to improve our services through cutting-edge technology.</p>
+            </div>
+            <div>
+              <h3 className="text-xl font-semibold text-green-800 mb-2">Customer-Centric</h3>
+              <p className="text-gray-600">Our clients' needs and satisfaction are at the heart of everything we do.</p>
+            </div>
+            <div>
+              <h3 className="text-xl font-semibold text-green-800 mb-2">Sustainability</h3>
+              <p className="text-gray-600">We're committed to promoting eco-friendly practices in real estate.</p>
+            </div>
           </div>
-        </div>
-      </div>
-    </div>
-  );
+        </section>
+
+        <section className="text-center">
+          <h2 className="text-3xl font-bold text-green-800 mb-4">Ready to Find Your Dream Home?</h2>
+          <p className="text-xl text-gray-600 mb-8">Let Space Oracle guide you through your real estate journey.</p>
+          <Button
+            className="bg-yellow-500 text-black hover:bg-yellow-600 font-semibold px-8 py-3">
+            Get Started Today
+          </Button>
+        </section>
+      </main>
+      <Footer/>
+    </div>);
 }
