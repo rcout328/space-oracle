@@ -7,7 +7,7 @@ import { Footer } from "./footer"
 
 const teamMembers = [
   { name: "Jane Doe", role: "CEO", image: "https://leonardo-cdn.b-cdn.net/wp-content/uploads/2024/05/Default_Insanity_1.jpg", quote: "Our mission is to revolutionize the real estate industry." },
-  { name: "John Smith", role: "CTO", image: "https://leonardo-cdn.b-cdn.net/wp-content/uploads/2024/05/Default_Insanity_1.jpg", quote: "We're leveraging technology to create seamless experiences." },
+  { name: "John Smith", role: "CTO", image: "https://leonardo-cdn.b-cdn.net/wp-content/uploads/2024/05/Default_Insanity_1.jpg", quote: "We&apos;re leveraging technology to create seamless experiences." },
   { name: "Alice Johnson", role: "Head of Sales", image: "https://leonardo-cdn.b-cdn.net/wp-content/uploads/2024/05/Default_Insanity_1.jpg", quote: "Our clients&apos; satisfaction is our top priority." },
   { name: "Bob Williams", role: "Lead Designer", image: "https://leonardo-cdn.b-cdn.net/wp-content/uploads/2024/05/Default_Insanity_1.jpg", quote: "We believe in creating spaces that inspire." },
 ]
@@ -35,7 +35,7 @@ export function AboutUst() {
         <section className="mb-16 text-center">
           <h1 className="text-5xl font-bold text-green-800 mb-6">About Space Oracle</h1>
           <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
-            Space Oracle is a leading real estate company dedicated to helping people find their perfect homes and make smart property investments. With our innovative technology and expert team, we're revolutionizing the way people buy, sell, and rent properties.
+            Space Oracle is a leading real estate company dedicated to helping people find their perfect homes and make smart property investments. With our innovative technology and expert team, we&apos;re revolutionizing the way people buy, sell, and rent properties.
           </p>
           <Button className="bg-yellow-500 text-black font-semibold hover:bg-green-900">
             Learn More About Our Mission <ChevronRight className="ml-2 h-5 w-5" />
@@ -88,11 +88,11 @@ export function AboutUst() {
             </div>
             <div>
               <h3 className="text-xl font-semibold text-green-800 mb-2">Customer-Centric</h3>
-              <p className="text-gray-600">Our clients' needs and satisfaction are at the heart of everything we do.</p>
+              <p className="text-gray-600">Our clients&apos; needs and satisfaction are at the heart of everything we do.</p>
             </div>
             <div>
               <h3 className="text-xl font-semibold text-green-800 mb-2">Sustainability</h3>
-              <p className="text-gray-600">We're committed to promoting eco-friendly practices in real estate.</p>
+              <p className="text-gray-600">We&apos;re committed to promoting eco-friendly practices in real estate.</p>
             </div>
           </div>
         </section>
