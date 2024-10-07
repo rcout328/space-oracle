@@ -51,8 +51,7 @@ export function AboutUst() {
                 <CardContent className="p-4">
                   <h3 className="text-xl font-semibold text-green-800">{member.name}</h3>
                   <p className="text-gray-600 mb-2">{member.role}</p>
-                  <p className="text-sm italic text-gray-500">"{member.quote}"</p>
-                  <p className="text-gray-600">{member.role}</p>
+                  <p className="text-sm italic text-gray-500">&quot;{member.quote}&quot;</p>
                 </CardContent>
               </Card>
             ))}
@@ -108,5 +107,6 @@ export function AboutUst() {
         </section>
       </main>
       <Footer/>
-    </div>);
+    </div>
+  );
 }
