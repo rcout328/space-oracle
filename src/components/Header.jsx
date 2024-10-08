@@ -24,20 +24,16 @@ export default function Header() {
         <div className="flex items-center justify-between">
           <Link href="/" className="text-2xl font-bold text-green-800">Space Oracle</Link>
           
-          {/* Desktop Navigation */}
-          <nav className="hidden lg:flex space-x-6">
+          {/* Desktop Navigation - Centered */}
+          <nav className="hidden lg:flex space-x-6 justify-center w-full absolute left-0 right-0">
             <Link href="/" className="text-gray-600 hover:text-green-800 transition-colors">Home</Link>
-            <Link href="/properties" className="text-gray-600 hover:text-green-800 transition-colors">Properties</Link>
-            <Link href="/buy" className="text-gray-600 hover:text-green-800 transition-colors">Buy</Link>
-            <Link href="/sell" className="text-gray-600 hover:text-green-800 transition-colors">Sell</Link>
-            <Link href="/about" className="text-gray-600 hover:text-green-800 transition-colors">About Us</Link>
+            <Link href="/#about" className="text-gray-600 hover:text-green-800 transition-colors">About Us</Link>
+            <Link href="/proper" className="text-gray-600 hover:text-green-800 transition-colors">Properties</Link>
           </nav>
           
           {/* Desktop and Mobile Buttons */}
           <div className="flex items-center space-x-4">
-            <Link href="/login">
-              <Button variant="ghost" className="bg-yellow-500 text-black font-semibold hover:bg-yellow-600 transition-colors">Log In</Button>
-            </Link>
+            {/* Removed Log In button */}
             {/* Mobile Menu Button */}
             <Button variant="ghost" className="lg:hidden" onClick={() => setIsSidebarOpen(true)}>
               <Menu className="h-6 w-6" />

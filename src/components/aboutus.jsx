@@ -44,14 +44,28 @@ export function AboutUsComponent() {
             </ul>
           </div>
           <div className="bg-green-800 rounded-lg p-4 md:p-6 text-white">
-            <h3 className="text-xl md:text-2xl font-semibold mb-4">Our Vision</h3>
+            <h3 className="text-xl md:text-2xl font-semibold mb-4">Our Space Oracle</h3>
             <p className="mb-4 text-sm md:text-base">
-              To be the leading name in luxury real estate, known for our unparalleled quality, 
-              innovative designs, and commitment to creating homes that stand the test of time.
+              Space Oracle is our cutting-edge AI-powered platform that revolutionizes the real estate experience. 
+              It combines advanced algorithms with market insights to offer:
             </p>
-            <Button className="bg-yellow-500 text-gray-800 hover:bg-yellow-600 text-sm md:text-base">
-              Learn More <ArrowUpRight className="ml-2 h-4 w-4" />
-            </Button>
+            <ul className="space-y-2 mb-4">
+              <li className="flex items-start">
+                <CheckCircle className="mr-2 text-yellow-500 mt-1" size={16} />
+                <span>Personalized property recommendations</span>
+              </li>
+              <li className="flex items-start">
+                <CheckCircle className="mr-2 text-yellow-500 mt-1" size={16} />
+                <span>Predictive market analysis</span>
+              </li>
+              <li className="flex items-start">
+                <CheckCircle className="mr-2 text-yellow-500 mt-1" size={16} />
+                <span>Virtual property tours</span>
+              </li>
+            </ul>
+            <p className="text-sm md:text-base">
+              Empowering you to make informed decisions and find your perfect home with ease.
+            </p>
           </div>
         </div>
       </div>

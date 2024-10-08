@@ -1,22 +1,46 @@
 'use client'
 
+import { useState, useEffect } from 'react'
 import Link from 'next/link'
 import { Button } from "@/components/ui/button"
-import { ChevronDown, ArrowUpRight } from "lucide-react"
+import { ArrowUpRight } from "lucide-react"
 import { PlatformFeatures } from '@/components/platform-features'
 import { WorkProcess } from '@/components/work-process'
-import { PropertyListings } from '@/components/property-listings' // Import PropertyListings component
-import { LatestProjects } from '@/components/latest-projects' // Import LatestProjects component
-
-import { CallToActionComponent } from '@/components/call-to-action' // Import CallToAction component
-import { Footer } from '@/components/footer' // Import the new Footer component
+import { PropertyListings } from '@/components/property-listings'
+import { LatestProjects } from '@/components/latest-projects'
+import { CallToActionComponent } from '@/components/call-to-action'
+import { Footer } from '@/components/footer'
 import Header from './Header'
 import { AboutUsComponent } from './aboutus'
+import { supabase } from '@/lib/supabaseClient'
+import { InquiryForm } from './InquiryForm'
 
 export function HomePage() {
+  const [bestProperties, setBestProperties] = useState([])
+  const [showInquiryForm, setShowInquiryForm] = useState(false)
+
+  useEffect(() => {
+    fetchBestProperties()
+  }, [])
+
+  async function fetchBestProperties() {
+    try {
+      const { data, error } = await supabase
+        .from('properties')
+        .select('*')
+        .order('price', { ascending: false })
+        .limit(3)
+      
+      if (error) throw error
+      setBestProperties(data)
+    } catch (error) {
+      console.error('Error fetching best properties:', error)
+    }
+  }
+
   return (
     <div className="min-h-screen bg-white text-gray-800">
-     <Header/>
+      <Header/>
       <main className="container mx-auto px-4 py-16">
         <div className="relative z-10 text-center mb-16">
           <h1 className="text-6xl font-serif mb-4 text-green-800">
@@ -26,27 +50,52 @@ export function HomePage() {
             </span><br />
             House
           </h1>
-          <Button className="bg-yellow-500 text-gray-800 hover:bg-yellow-600">
+          <Button 
+            className="bg-yellow-500 text-gray-800 hover:bg-yellow-600"
+            onClick={() => setShowInquiryForm(true)}
+          >
             Get Started <ArrowUpRight className="ml-2 h-4 w-4" />
           </Button>
         </div>
+        
+        {/* Inquiry Form Modal */}
+        {showInquiryForm && (
+          <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
+            <div className="bg-white p-8 rounded-lg max-w-md w-full shadow-2xl transform transition-all duration-300 ease-in-out">
+              <h2 className="text-3xl font-bold mb-6 text-green-800">Get Started</h2>
+              <InquiryForm onClose={() => setShowInquiryForm(false)} />
+              <Button 
+                variant="ghost" 
+                onClick={() => setShowInquiryForm(false)}
+                className="mt-4 text-green-800 hover:bg-green-100 transition-colors duration-300"
+              >
+                Close
+              </Button>
+            </div>
+          </div>
+        )}
+
         <div className="flex flex-nowrap overflow-x-auto space-x-4 pb-4">
-          {['Modern Villa', 'Luxury Apartment', 'Cozy Cottage'].map((title, index) => (
-            <div key={index} className="flex-none w-[calc(33.333%-16px)] min-w-[280px]">
+          {bestProperties.map((property) => (
+            <div key={property.id} className="flex-none w-[calc(33.333%-16px)] min-w-[280px]">
               <div className="relative overflow-hidden rounded-3xl h-[300px]">
                 <img
-                  src={`https://cdn.leonardo.ai/users/5ade5a1e-6a85-4754-bc1b-5d2a113caee4/generations/eed6fd05-ab81-463e-a743-d5870f5354a1/Leonardo_Phoenix_Create_a_hyperrealistic_HDR_image_of_a_modern_2.jpg`}
-                  alt={title}
-                  className="w-full h-full object-cover" />
+                  src={property.image || "https://via.placeholder.com/300x200"}
+                  alt={property.property_name}
+                  className="w-full h-full object-cover"
+                />
                 <div className="absolute inset-0 bg-black bg-opacity-40 flex flex-col justify-end p-6">
-                  <h3 className="text-2xl font-semibold text-white mb-2">{title}</h3>
-                  <p className="text-white mb-4">Discover your dream home</p>
-                  <Button
-                    size="sm"
-                    variant="ghost"
-                    className="bg-yellow-500 text-gray-800 hover:bg-yellow-600 self-start">
-                    Learn More <ArrowUpRight className="ml-2 h-4 w-4" />
-                  </Button>
+                  <h3 className="text-2xl font-semibold text-white mb-2">{property.property_name}</h3>
+                  <p className="text-white mb-4">{property.city}</p>
+                  <Link href={`/properties/${property.id}`} passHref>
+                    <Button
+                      size="sm"
+                      variant="ghost"
+                      className="bg-yellow-500 text-gray-800 hover:bg-yellow-600 self-start"
+                    >
+                      Learn More <ArrowUpRight className="ml-2 h-4 w-4" />
+                    </Button>
+                  </Link>
                 </div>
               </div>
             </div>
@@ -57,15 +106,17 @@ export function HomePage() {
         
         <WorkProcess />
         
-        <PropertyListings /> {/* Add PropertyListings component here */}
+        <PropertyListings />
         
-        <LatestProjects /> {/* Add LatestProjects component here */}
+        <LatestProjects />
         
-        <AboutUsComponent /> {/* Add AboutUsComponent here */}
+        <section id="about" className="py-16">
+          <AboutUsComponent />
+        </section>
         
-        <CallToActionComponent /> {/* Add CallToAction component here */}
+        <CallToActionComponent />
       </main>
-      <Footer /> {/* Add the Footer component here */}
+      <Footer />
     </div>
   );
 }
