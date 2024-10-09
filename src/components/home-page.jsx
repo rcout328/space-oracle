@@ -41,9 +41,9 @@ export function HomePage() {
   return (
     <div className="min-h-screen bg-white text-gray-800">
       <Header/>
-      <main className="container mx-auto px-4 py-16">
-        <div className="relative z-10 text-center mb-16">
-          <h1 className="text-6xl font-serif mb-4 text-green-800">
+      <main className="container mx-auto px-4 py-8 sm:py-12 md:py-16">
+        <div className="relative z-10 text-center mb-8 sm:mb-12 md:mb-16">
+          <h1 className="font-serif mb-4 text-green-800 text-4xl sm:text-5xl md:text-6xl leading-tight">
             We Create<br />
             Your <span className="relative">
               <span className="relative">Future</span>

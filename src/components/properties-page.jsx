@@ -9,6 +9,7 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import Header from "./Header"
 import { Footer } from "./footer"
 import { supabase } from '@/lib/supabaseClient'
+import { Home } from 'lucide-react'  // Import the Home icon
 
 export function PropertiesPageComponent() {
   const [properties, setProperties] = useState([])
@@ -110,11 +111,15 @@ export function PropertiesPageComponent() {
             <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl text-center text-green-800 mb-12">
               Featured Properties
             </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
-              {filteredProperties.map((property) => (
-                <PropertyCard key={property.property_id} {...property} />
-              ))}
-            </div>
+            {filteredProperties.length > 0 ? (
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                {filteredProperties.map((property) => (
+                  <PropertyCard key={property.property_id} {...property} />
+                ))}
+              </div>
+            ) : (
+              <NoPropertiesAvailable />
+            )}
           </div>
         </section>
       </main>
@@ -152,5 +157,17 @@ function PropertyCard({ id, property_name, property_type, location, city, bedroo
         </Link>
       </CardFooter>
     </Card>
+  );
+}
+
+function NoPropertiesAvailable() {
+  return (
+    <div className="flex flex-col items-center justify-center py-12 px-4 text-center">
+      <Home className="w-16 h-16 text-green-800 mb-4" />
+      <h3 className="text-2xl font-semibold text-gray-900 mb-2">No Properties Available</h3>
+      <p className="text-gray-600 max-w-md">
+        We couldn't find any properties matching your criteria. Try adjusting your filters or check back later for new listings.
+      </p>
+    </div>
   );
 }

@@ -8,6 +8,7 @@ import { Bed, Bath, Square, MapPin, Calendar, DollarSign, Clock, Home, MessageCi
 import { supabase } from '@/lib/supabaseClient'
 import Header from './Header'
 import { Footer } from './footer'
+import { BackButton } from './BackButton'  // Import the BackButton component
 
 export function AdvancedPropertyDetailsComponent({ id }) {
   const [propertyData, setPropertyData] = useState(null)
@@ -61,7 +62,8 @@ export function AdvancedPropertyDetailsComponent({ id }) {
       <Header />
       <main className="container mx-auto px-4 py-8">
         <div className="mb-8">
-          <h1 className="text-4xl font-bold text-green-800 mb-2">{propertyData.property_name}</h1>
+          <BackButton />
+          <h1 className="text-4xl font-bold text-green-800 mb-2 mt-4">{propertyData.property_name}</h1>
           <p className="text-xl text-gray-600 flex items-center">
             <MapPin className="h-5 w-5 mr-2" /> {propertyData.location}, {propertyData.city}
           </p>

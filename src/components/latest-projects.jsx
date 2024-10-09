@@ -32,8 +32,8 @@ export function LatestProjects() {
     <div className="container mx-auto px-4 py-16">
       <h2 className="text-4xl font-serif mb-8 text-green-800">Latest Projects</h2>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        {bestProperties.map((property, index) => (
-          <div key={property.property_id} className="relative overflow-hidden rounded-3xl bg-white shadow-lg">
+        {bestProperties.map((property) => (
+          <div key={property.id} className="relative overflow-hidden rounded-3xl bg-white shadow-lg">
             <img
               src={property.image || "https://via.placeholder.com/300x200"}
               alt={property.property_name}
@@ -42,12 +42,14 @@ export function LatestProjects() {
             <div className="p-6">
               <h3 className="text-xl font-semibold text-gray-800 mb-2">{property.property_name}</h3>
               <p className="text-gray-600 mb-4">{property.city} - ${property.price.toLocaleString()}</p>
-              <Button
-                size="sm"
-                variant="ghost"
-                className="bg-yellow-500 text-gray-800 hover:bg-yellow-600">
-                Learn More <ArrowUpRight className="ml-2 h-4 w-4" />
-              </Button>
+              <Link href={`/properties/${property.id}`} passHref>
+                <Button
+                  size="sm"
+                  variant="ghost"
+                  className="bg-yellow-500 text-gray-800 hover:bg-yellow-600">
+                  Learn More <ArrowUpRight className="ml-2 h-4 w-4" />
+                </Button>
+              </Link>
             </div>
           </div>
         ))}
