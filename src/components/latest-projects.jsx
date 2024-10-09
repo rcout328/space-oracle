@@ -12,21 +12,20 @@ export function LatestProjects() {
   useEffect(() => {
     fetchBestProperties()
   }, [])
-
   async function fetchBestProperties() {
     try {
       const { data, error } = await supabase
         .from('properties')
         .select('*')
-        .order('price', { ascending: false })
-        .limit(3)
+        .eq('top4', true) // Filter to only include properties where top3 is true
+        .limit(3); // Limit to the top 3 properties
       
-      if (error) throw error
-      setBestProperties(data)
+      if (error) throw error;
+      setBestProperties(data);
     } catch (error) {
-      console.error('Error fetching best properties:', error)
+      console.error('Error fetching best properties:', error);
     }
-  }
+}
 
   return (
     <div className="container mx-auto px-4 py-16">
