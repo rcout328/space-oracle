@@ -166,7 +166,7 @@ function NoPropertiesAvailable() {
       <Home className="w-16 h-16 text-green-800 mb-4" />
       <h3 className="text-2xl font-semibold text-gray-900 mb-2">No Properties Available</h3>
       <p className="text-gray-600 max-w-md">
-        We couldn't find any properties matching your criteria. Try adjusting your filters or check back later for new listings.
+        We couldn&apos;t find any properties matching your criteria. Try adjusting your filters or check back later for new listings.
       </p>
     </div>
   );
