@@ -7,7 +7,7 @@ export function PropertyListings() {
     <div className="container mx-auto px-4 py-16">
       <div className="flex flex-col lg:flex-row justify-between items-start mb-12">
         <div className="mb-8 lg:mb-0">
-          <h2 className="text-4xl font-serif mb-4 text-green-800">Properties<br />Posted By</h2>
+          <h2 className="text-4xl font-serif mb-4 text-[#035527]">Properties<br />Posted By</h2>
           <p className="text-gray-600 max-w-md">
             We use only the finest materials, sourced from reputable suppliers, to ensure the safety.
           </p>
@@ -19,7 +19,7 @@ export function PropertyListings() {
           </div>
         </div>
         <div className="w-full lg:w-2/3">
-          <h3 className="text-2xl font-semibold mb-4 text-green-800">
+          <h3 className="text-2xl font-semibold mb-4 text-[#035527]">
             Choose the type Of adviser
             <span className="block text-sm font-normal text-gray-600 mt-2">
               (We use only the finest materials, sourced from reputable suppliers, to ensure the safety, sustainability, and longevity of your property.)
@@ -30,7 +30,7 @@ export function PropertyListings() {
               {['Owner Listed Properties', 'Dealer Listed Properties'].map((title, index) => (
                 <div
                   key={index}
-                  className={`flex-none w-3/4 lg:w-1/2 rounded-3xl p-6 ${index === 0 ? 'bg-green-800' : 'bg-yellow-800'}`}>
+                  className={`flex-none w-3/4 lg:w-1/2 rounded-3xl p-6 ${index === 0 ? 'bg-[#035527]' : 'bg-[#C7852F]'}`}>
                   <h4 className="text-2xl font-semibold mb-4 text-white">{title}</h4>
                   <div className="flex justify-between items-center mb-4">
                     <span className="text-lg font-semibold text-gray-300">3 BHK</span> {/* Updated text */}

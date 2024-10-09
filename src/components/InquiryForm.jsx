@@ -97,7 +97,7 @@ export function InquiryForm({ onClose }) {
       </div>
       <Button 
         type="submit" 
-        className="w-full bg-green-800 hover:bg-green-900 text-white py-3 text-lg font-semibold transition-colors duration-300"
+        className="w-full bg-[#035527] hover:bg-[#035527] text-white py-3 text-lg font-semibold transition-colors duration-300"
         disabled={isSubmitting}
       >
         {isSubmitting ? 'Submitting...' : 'Submit Inquiry'}

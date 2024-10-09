@@ -9,13 +9,13 @@ export function WorkProcess() {
       <div className="container mx-auto px-4">
         <div className="flex flex-col lg:flex-row items-center lg:items-start gap-8">
           <div className="w-full lg:w-1/2">
-            <div className="bg-green-800 rounded-3xl p-4 relative">
+            <div className="bg-[#035527] rounded-3xl p-4 relative">
               <img
                 src="https://cdn.leonardo.ai/users/5ade5a1e-6a85-4754-bc1b-5d2a113caee4/generations/eed6fd05-ab81-463e-a743-d5870f5354a1/Leonardo_Phoenix_Create_a_hyperrealistic_HDR_image_of_a_modern_2.jpg"
                 alt="Modern house illustration"
                 className="w-full h-auto rounded-2xl object-cover" />
               <div
-                className="absolute bottom-4 left-4 bg-green-600 text-white px-3 py-1 md:px-4 md:py-2 rounded-full flex items-center">
+                className="absolute bottom-4 left-4 bg-[#035527] text-white px-3 py-1 md:px-4 md:py-2 rounded-full flex items-center">
                 <span className="text-xl md:text-3xl font-bold mr-2">23+</span>
                 <span className="text-xs md:text-sm">Over<br />Experience</span>
               </div>
@@ -23,7 +23,7 @@ export function WorkProcess() {
          
           </div>
           <div className="w-full lg:w-1/2 space-y-4 md:space-y-6">
-            <h2 className="text-3xl md:text-4xl font-serif text-green-800">Our Work Process makes your dream Home</h2>
+            <h2 className="text-3xl md:text-4xl font-serif text-[#035527]">Our Work Process makes your dream Home</h2>
             <div className="space-y-4">
               {[
                 {
@@ -40,7 +40,7 @@ export function WorkProcess() {
                 }
               ].map((item, index) => (
                 <div key={index} className="flex items-start gap-3 md:gap-4">
-                  <div className={`p-2 rounded-lg ${index === 1 ? 'bg-green-800' : 'bg-green-800'}`}>
+                  <div className={`p-2 rounded-lg ${index === 1 ? 'bg-[#035527]' : 'bg-[#035527]'}`}>
                     <CheckSquare className="w-4 h-4 md:w-6 md:h-6 text-white" />
                   </div>
                   <div>
@@ -50,7 +50,7 @@ export function WorkProcess() {
                 </div>
               ))}
             </div>
-            <Button className="bg-yellow-500 text-gray-800 hover:bg-yellow-600 rounded-full px-4 py-2 md:px-6 md:py-3 text-sm md:text-base font-semibold w-full md:w-auto">
+            <Button className="bg-yellow-500 text-gray-800 hover:bg-yellow-500 rounded-full px-4 py-2 md:px-6 md:py-3 text-sm md:text-base font-semibold w-full md:w-auto">
               Let&apos;s Start With Us
               <ArrowUpRight className="ml-2 h-4 w-4 md:h-5 md:w-5" />
             </Button>

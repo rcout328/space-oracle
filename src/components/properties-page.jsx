@@ -66,9 +66,9 @@ export function PropertiesPageComponent() {
     <div className="flex flex-col min-h-screen bg-gray-50">
       <Header/>
       <main className="flex-1">
-        <section className="w-full py-12 md:py-24 lg:py-32 bg-gradient-to-r from-green-50 to-blue-50">
+      <section className="w-full py-12 md:py-24 lg:py-32 bg-gradient-to-r from-green-50 to-blue-50">
           <div className="container px-4 md:px-6 mx-auto">
-            <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl text-center text-green-800 mb-8">
+            <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl text-center text-[#035527] mb-8">
               Discover Your Dream Property
             </h1>
             <div className="flex flex-col md:flex-row gap-4 max-w-3xl mx-auto">
@@ -108,7 +108,7 @@ export function PropertiesPageComponent() {
         </section>
         <section className="w-full py-12 md:py-24 lg:py-32">
           <div className="container px-4 md:px-6 mx-auto">
-            <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl text-center text-green-800 mb-12">
+            <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl text-center text-[#035527] mb-12">
               Featured Properties
             </h2>
             {filteredProperties.length > 0 ? (
@@ -146,14 +146,14 @@ function PropertyCard({ id, property_name, property_type, location, city, bedroo
       </CardHeader>
       <CardContent className="p-4">
         <CardTitle className="text-xl font-semibold mb-2">{property_name}</CardTitle>
-        <p className="text-green-800 font-bold mb-1">${price.toLocaleString()}</p>
+        <p className="text-[#035527] font-bold mb-1">${price.toLocaleString()}</p>
         <p className="text-gray-600 text-sm mb-1">{location}, {city}</p>
         <p className="text-gray-600 text-sm mb-1">{property_type}</p>
         <p className="text-gray-600 text-sm">{bedrooms} beds • {bathrooms} baths • {size_sqft} sqft</p>
       </CardContent>
       <CardFooter className="p-4">
         <Link href={`/properties/${id}`} passHref>
-          <Button className="w-full bg-green-800 text-white hover:bg-green-900 transition-colors">View Details</Button>
+          <Button className="w-full bg-[#035527] text-white hover:bg-[#035527] transition-colors">View Details</Button>
         </Link>
       </CardFooter>
     </Card>
@@ -163,7 +163,7 @@ function PropertyCard({ id, property_name, property_type, location, city, bedroo
 function NoPropertiesAvailable() {
   return (
     <div className="flex flex-col items-center justify-center py-12 px-4 text-center">
-      <Home className="w-16 h-16 text-green-800 mb-4" />
+      <Home className="w-16 h-16 text-[#035527] mb-4" />
       <h3 className="text-2xl font-semibold text-gray-900 mb-2">No Properties Available</h3>
       <p className="text-gray-600 max-w-md">
         We couldn&apos;t find any properties matching your criteria. Try adjusting your filters or check back later for new listings.

@@ -39,11 +39,11 @@ export function HomePage() {
 }
 
   return (
-    <div className="min-h-screen bg-white text-gray-800">
+    <div className="min-h-screen bg-white text-[#035527]">
       <Header/>
       <main className="container mx-auto px-4 py-8 sm:py-12 md:py-16">
         <div className="relative z-10 text-center mb-8 sm:mb-12 md:mb-16">
-          <h1 className="font-serif mb-4 text-green-800 text-4xl sm:text-5xl md:text-6xl leading-tight">
+          <h1 className="font-serif mb-4 text-[#035527] text-4xl sm:text-5xl md:text-6xl leading-tight">
             We Create<br />
             Your <span className="relative">
               <span className="relative">Future</span>
@@ -51,7 +51,7 @@ export function HomePage() {
             House
           </h1>
           <Button 
-            className="bg-yellow-500 text-gray-800 hover:bg-yellow-600"
+            className="bg-yellow-500 text-black hover:bg-yellow-700"
             onClick={() => setShowInquiryForm(true)}
           >
             Get Started <ArrowUpRight className="ml-2 h-4 w-4" />
@@ -62,12 +62,12 @@ export function HomePage() {
         {showInquiryForm && (
           <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
             <div className="bg-white p-8 rounded-lg max-w-md w-full shadow-2xl transform transition-all duration-300 ease-in-out">
-              <h2 className="text-3xl font-bold mb-6 text-green-800">Get Started</h2>
+              <h2 className="text-3xl font-bold mb-6 text-text-[#035527]">Get Started</h2>
               <InquiryForm onClose={() => setShowInquiryForm(false)} />
               <Button 
                 variant="ghost" 
                 onClick={() => setShowInquiryForm(false)}
-                className="mt-4 text-green-800 hover:bg-green-100 transition-colors duration-300"
+                className="mt-4 text-[#035527] hover:bg-[#035527] transition-colors duration-300"
               >
                 Close
               </Button>
@@ -91,7 +91,7 @@ export function HomePage() {
                     <Button
                       size="sm"
                       variant="ghost"
-                      className="bg-yellow-500 text-gray-800 hover:bg-yellow-600 self-start"
+                      className="bg-yellow-500 text-black hover:bg-yellow-700 self-start"
                     >
                       Learn More <ArrowUpRight className="ml-2 h-4 w-4" />
                     </Button>
@@ -103,7 +103,7 @@ export function HomePage() {
         </div>
         
         <PlatformFeatures />
-        
+     
         <WorkProcess />
         
         <PropertyListings />

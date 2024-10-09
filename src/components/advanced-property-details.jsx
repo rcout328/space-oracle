@@ -63,7 +63,7 @@ export function AdvancedPropertyDetailsComponent({ id }) {
       <main className="container mx-auto px-4 py-8">
         <div className="mb-8">
           <BackButton />
-          <h1 className="text-4xl font-bold text-green-800 mb-2 mt-4">{propertyData.property_name}</h1>
+          <h1 className="text-4xl font-bold text-[#035527] mb-2 mt-4">{propertyData.property_name}</h1>
           <p className="text-xl text-gray-600 flex items-center">
             <MapPin className="h-5 w-5 mr-2" /> {propertyData.location}, {propertyData.city}
           </p>
@@ -126,13 +126,13 @@ export function AdvancedPropertyDetailsComponent({ id }) {
           <div className="lg:col-span-1">
             <Card className="mb-6 sticky top-20">
               <CardContent className="pt-6">
-                <h2 className="text-3xl font-bold text-green-800 mb-4">${propertyData.price.toLocaleString()}</h2>
+                <h2 className="text-3xl font-bold text-[#035527] mb-4">${propertyData.price.toLocaleString()}</h2>
                 <p className="text-lg text-gray-600 mb-4">{propertyData.listing_status}</p>
                 <div className="space-y-4">
-                  <Button className="w-full bg-green-800 text-white hover:bg-green-900" onClick={() => handleWhatsAppRedirect('tour')}>
+                  <Button className="w-full bg-[#035527] text-white hover:bg-[#035527]" onClick={() => handleWhatsAppRedirect('tour')}>
                     Schedule a Tour
                   </Button>
-                  <Button variant="outline" className="w-full border-green-800 text-green-800 hover:bg-green-50" onClick={() => handleWhatsAppRedirect('offer')}>
+                  <Button variant="outline" className="w-full border-[#035527] text-[#035527] hover:bg-[#035527]" onClick={() => handleWhatsAppRedirect('offer')}>
                     Make an Offer
                   </Button>
                 </div>
@@ -145,7 +145,7 @@ export function AdvancedPropertyDetailsComponent({ id }) {
               </CardHeader>
               <CardContent>
                 <Button 
-                  className="w-full bg-green-800 text-white hover:bg-green-900 flex items-center justify-center"
+                  className="w-full bg-[#035527] text-white hover:bg-[#035527] flex items-center justify-center"
                   onClick={() => handleWhatsAppRedirect('contact')}
                 >
                   <MessageCircle className="mr-2 h-5 w-5" />
@@ -164,7 +164,7 @@ export function AdvancedPropertyDetailsComponent({ id }) {
 function PropertyDetail({ icon: Icon, label, value }) {
   return (
     <div className="flex items-center">
-      <Icon className="h-5 w-5 mr-2 text-green-800" />
+      <Icon className="h-5 w-5 mr-2 text-[#035527]" />
       <div>
         <p className="text-sm text-gray-500">{label}</p>
         <p className="font-semibold">{value}</p>

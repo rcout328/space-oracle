@@ -33,23 +33,23 @@ export function AboutUst() {
       <Header/>
       <main className="container mx-auto px-4 py-12">
         <section className="mb-16 text-center">
-          <h1 className="text-5xl font-bold text-green-800 mb-6">About Space Oracle</h1>
+          <h1 className="text-5xl font-bold text-[#035527] mb-6">About Space Oracle</h1>
           <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
             Space Oracle is a leading real estate company dedicated to helping people find their perfect homes and make smart property investments. With our innovative technology and expert team, we&apos;re revolutionizing the way people buy, sell, and rent properties.
           </p>
-          <Button className="bg-yellow-500 text-black font-semibold hover:bg-green-900">
+          <Button className="bg-[#C7852F] text-black font-semibold hover:bg-[#035527]">
             Learn More About Our Mission <ChevronRight className="ml-2 h-5 w-5" />
           </Button>
         </section>
 
         <section className="mb-16">
-          <h2 className="text-3xl font-bold text-green-800 mb-8 text-center">Our Team</h2>
+          <h2 className="text-3xl font-bold text-[#035527] mb-8 text-center">Our Team</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {teamMembers.map((member, index) => (
               <Card key={index} className="overflow-hidden hover:shadow-lg transition-shadow">
                 <img src={member.image} alt={member.name} className="w-full h-48 object-cover" />
                 <CardContent className="p-4">
-                  <h3 className="text-xl font-semibold text-green-800">{member.name}</h3>
+                  <h3 className="text-xl font-semibold text-[#035527]">{member.name}</h3>
                   <p className="text-gray-600 mb-2">{member.role}</p>
                   <p className="text-sm italic text-gray-500">&quot;{member.quote}&quot;</p>
                 </CardContent>
@@ -59,13 +59,13 @@ export function AboutUst() {
         </section>
 
         <section className="mb-16">
-          <h2 className="text-3xl font-bold text-green-800 mb-8">Our Achievements</h2>
+          <h2 className="text-3xl font-bold text-[#035527] mb-8">Our Achievements</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {achievements.map((achievement, index) => (
               <Card key={index}>
                 <CardHeader>
-                  <achievement.icon className="h-12 w-12 text-yellow-500 mb-4" />
-                  <CardTitle className="text-4xl font-bold text-green-800">{achievement.title}</CardTitle>
+                  <achievement.icon className="h-12 w-12 text-[#C7852F] mb-4" />
+                  <CardTitle className="text-4xl font-bold text-[#035527]">{achievement.title}</CardTitle>
                 </CardHeader>
                 <CardContent>
                   <p className="text-gray-600">{achievement.description}</p>
@@ -75,33 +75,33 @@ export function AboutUst() {
           </div>
         </section>
 
-        <section className="bg-green-50 rounded-lg p-8 mb-16">
-          <h2 className="text-3xl font-bold text-green-800 mb-4">Our Values</h2>
+        <section className="bg-[#035527] rounded-lg p-8 mb-16">
+          <h2 className="text-3xl font-bold text-[#035527] mb-4">Our Values</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div>
-              <h3 className="text-xl font-semibold text-green-800 mb-2">Integrity</h3>
+              <h3 className="text-xl font-semibold text-[#035527] mb-2">Integrity</h3>
               <p className="text-gray-600">We believe in honest, transparent dealings with all our clients and partners.</p>
             </div>
             <div>
-              <h3 className="text-xl font-semibold text-green-800 mb-2">Innovation</h3>
+              <h3 className="text-xl font-semibold text-[#035527] mb-2">Innovation</h3>
               <p className="text-gray-600">We continuously strive to improve our services through cutting-edge technology.</p>
             </div>
             <div>
-              <h3 className="text-xl font-semibold text-green-800 mb-2">Customer-Centric</h3>
+              <h3 className="text-xl font-semibold text-[#035527] mb-2">Customer-Centric</h3>
               <p className="text-gray-600">Our clients&apos; needs and satisfaction are at the heart of everything we do.</p>
             </div>
             <div>
-              <h3 className="text-xl font-semibold text-green-800 mb-2">Sustainability</h3>
+              <h3 className="text-xl font-semibold text-[#035527] mb-2">Sustainability</h3>
               <p className="text-gray-600">We&apos;re committed to promoting eco-friendly practices in real estate.</p>
             </div>
           </div>
         </section>
 
         <section className="text-center">
-          <h2 className="text-3xl font-bold text-green-800 mb-4">Ready to Find Your Dream Home?</h2>
+          <h2 className="text-3xl font-bold text-[#035527] mb-4">Ready to Find Your Dream Home?</h2>
           <p className="text-xl text-gray-600 mb-8">Let Space Oracle guide you through your real estate journey.</p>
           <Button
-            className="bg-yellow-500 text-black hover:bg-yellow-600 font-semibold px-8 py-3">
+            className="bg-[#C7852F] text-black hover:bg-[#C7852F] font-semibold px-8 py-3">
             Get Started Today
           </Button>
         </section>

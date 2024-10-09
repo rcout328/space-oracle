@@ -66,7 +66,7 @@ export function BuyPropertiesComponent() {
     <div className="min-h-screen bg-gray-50">
       <Header />
       <main className="container mx-auto px-4 py-8">
-        <section className="mb-12 bg-gradient-to-r from-green-600 to-green-800 rounded-lg p-8 text-white">
+        <section className="mb-12 bg-[#035527] rounded-lg p-8 text-white">
           <h1 className="text-4xl font-bold mb-4">Find Your Dream Property</h1>
           <p className="text-xl mb-6">Discover a wide range of properties tailored to your needs.</p>
           <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
@@ -87,7 +87,7 @@ export function BuyPropertiesComponent() {
               <span>-</span>
               <Input type="number" placeholder="Max price" className="bg-white text-black" />
             </div>
-            <Button className="bg-yellow-500 text-white hover:bg-yellow-600">Search Properties</Button>
+            <Button className="bg-[#C7852F] text-white hover:bg-[#C7852F]">Search Properties</Button>
           </div>
         </section>
         
@@ -200,7 +200,7 @@ function PropertyCard({ property }) {
           alt={property.title}
           className="w-full h-48 object-cover" />
         {property.featured && (
-          <span className="absolute top-2 left-2 bg-yellow-500 text-white px-2 py-1 text-xs font-bold rounded">
+          <span className="absolute top-2 left-2 bg-[#C7852F] text-white px-2 py-1 text-xs font-bold rounded">
             Featured
           </span>
         )}
@@ -240,7 +240,7 @@ function PropertyListItem({ property }) {
             alt={property.title}
             className="w-full h-full object-cover" />
           {property.featured && (
-            <span className="absolute top-2 left-2 bg-yellow-500 text-white px-2 py-1 text-xs font-bold rounded">
+            <span className="absolute top-2 left-2 bg-[#C7852F] text-white px-2 py-1 text-xs font-bold rounded">
               Featured
             </span>
           )}

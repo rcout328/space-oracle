@@ -5,7 +5,7 @@ import { Facebook, Twitter, Instagram, Linkedin } from 'lucide-react'
 
 export function Footer() {
   return (
-    <footer className="bg-green-900 text-white">
+    <footer className="bg-[#035527] text-white">
       <div className="container mx-auto px-4 py-12">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div className="md:col-span-1">
@@ -46,7 +46,7 @@ export function Footer() {
             </div>
           </div>
         </div>
-        <div className="mt-12 pt-8 border-t border-green-800 text-center text-white">
+        <div className="mt-12 pt-8 border-t border-[#035527] text-center text-white">
           <p>&copy; 2023 Space Oracle. All rights reserved.</p>
         </div>
       </div>

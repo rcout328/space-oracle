@@ -7,7 +7,7 @@ export function CallToActionComponent() {
   return (
     <div className="bg-white py-8 md:py-16">
       <div className="container mx-auto px-4">
-        <div className="bg-green-800 rounded-3xl overflow-hidden">
+        <div className="bg-[#035527] rounded-3xl overflow-hidden">
           <div className="flex flex-col md:flex-row items-center">
             <div className="w-full md:w-1/2 p-6 md:p-12 text-white">
               <h2 className="text-3xl md:text-5xl font-serif mb-4 md:mb-6">
@@ -16,7 +16,7 @@ export function CallToActionComponent() {
               <p className="text-base md:text-lg mb-6 md:mb-8">
                 Ready to turn your dream home into reality? Our team of experts is here to guide you through every step of the process.
               </p>
-              <Button className="bg-yellow-500 text-gray-800 hover:bg-yellow-600 rounded-full px-6 py-2 md:px-8 md:py-3 text-sm md:text-lg font-semibold w-full md:w-auto">
+              <Button className="bg-[#C7852F] text-gray-800 hover:bg-[#C7852F] rounded-full px-6 py-2 md:px-8 md:py-3 text-sm md:text-lg font-semibold w-full md:w-auto">
                 Start a project
                 <ArrowUpRight className="ml-2 h-4 w-4 md:h-5 md:w-5" />
               </Button>

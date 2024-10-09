@@ -31,7 +31,7 @@ export function SellPropertiesComponent() {
     <div className="min-h-screen bg-gray-50">
       <Header/>
       <main className="container mx-auto px-4 py-8">
-        <section className="mb-12 bg-gradient-to-r from-green-600 to-green-800 rounded-lg p-8 text-white">
+        <section className="mb-12 bg-[#035527] rounded-lg p-8 text-white">
           <h1 className="text-4xl font-bold mb-4">Sell Your Property</h1>
           <p className="text-xl mb-6">List your property with Space Oracle and reach thousands of potential buyers.</p>
         </section>
@@ -40,7 +40,7 @@ export function SellPropertiesComponent() {
           <div className="lg:col-span-2">
             <Card>
               <CardHeader>
-                <CardTitle className="text-2xl font-bold text-green-800">Property Details</CardTitle>
+                <CardTitle className="text-2xl font-bold text-[#035527]">Property Details</CardTitle>
               </CardHeader>
               <CardContent>
                 <form className="space-y-6">
@@ -98,7 +98,7 @@ export function SellPropertiesComponent() {
                       <div className="space-y-1 text-center">
                         <Camera className="mx-auto h-12 w-12 text-gray-400" />
                         <div className="flex text-sm text-gray-600">
-                          <label htmlFor="images" className="relative cursor-pointer bg-white rounded-md font-medium text-green-800 hover:text-green-700 focus-within:outline-none focus-within:ring-2 focus-within:ring-offset-2 focus-within:ring-green-500">
+                          <label htmlFor="images" className="relative cursor-pointer bg-white rounded-md font-medium text-[#035527] hover:text-[#035527] focus-within:outline-none focus-within:ring-2 focus-within:ring-offset-2 focus-within:ring-[#035527]">
                             <span>Upload files</span>
                             <input id="images" name="images" type="file" className="sr-only" multiple onChange={handleImageUpload} />
                           </label>
@@ -116,10 +116,10 @@ export function SellPropertiesComponent() {
                   <div className="flex items-center">
                     <Switch id="terms" />
                     <Label htmlFor="terms" className="ml-2 text-sm text-gray-700">
-                      I agree to the <a href="#" className="text-green-800 hover:underline">terms and conditions</a>
+                      I agree to the <a href="#" className="text-[#035527] hover:underline">terms and conditions</a>
                     </Label>
                   </div>
-                  <Button type="submit" className="w-full bg-green-800 text-white hover:bg-green-900 transition-colors">
+                  <Button type="submit" className="w-full bg-[#035527] transition-colors">
                     List My Property
                   </Button>
                 </form>
@@ -130,31 +130,31 @@ export function SellPropertiesComponent() {
           <div className="lg:col-span-1 space-y-6">
             <Card>
               <CardHeader>
-                <CardTitle className="text-xl font-semibold text-green-800">Selling Tips</CardTitle>
+                <CardTitle className="text-xl font-semibold text-[#035527]">Selling Tips</CardTitle>
               </CardHeader>
               <CardContent>
                 <ul className="space-y-4">
                   <li className="flex items-center">
-                    <Camera className="h-5 w-5 mr-3 text-green-800" />
+                    <Camera className="h-5 w-5 mr-3 text-[#035527]" />
                     <span>Stage your home for better photos</span>
                   </li>
                   <li className="flex items-center">
-                    <DollarSign className="h-5 w-5 mr-3 text-green-800" />
+                    <DollarSign className="h-5 w-5 mr-3 text-[#035527]" />
                     <span>Price competitively based on market trends</span>
                   </li>
                   <li className="flex items-center">
-                    <BarChart className="h-5 w-5 mr-3 text-green-800" />
+                    <BarChart className="h-5 w-5 mr-3 text-[#035527]" />
                     <span>Highlight unique features of your property</span>
                   </li>
                   <li className="flex items-center">
-                    <Calendar className="h-5 w-5 mr-3 text-green-800" />
+                    <Calendar className="h-5 w-5 mr-3 text-[#035527]" />
                     <span>Be flexible with showing times</span>
                   </li>
                 </ul>
               </CardContent>
             </Card>
             
-            <Card className="bg-gradient-to-br from-green-700 to-green-900 text-white">
+            <Card className="bg-[#035527] text-white">
               <CardHeader>
                 <CardTitle className="text-xl font-semibold">Why Sell with Us?</CardTitle>
               </CardHeader>
@@ -173,7 +173,7 @@ export function SellPropertiesComponent() {
                     <span>Professional photography and virtual tours</span>
                   </li>
                 </ul>
-                <Button className="w-full mt-6 bg-white text-green-800 hover:bg-gray-100 transition-colors">
+                <Button className="w-full mt-6 bg-white text-[#035527] hover:bg-gray-100 transition-colors">
                   Learn More
                 </Button>
               </CardContent>

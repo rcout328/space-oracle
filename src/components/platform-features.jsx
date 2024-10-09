@@ -6,7 +6,7 @@ export function PlatformFeatures() {
   return (
     <div className="container mx-auto px-4 py-16">
       <div className="flex flex-col md:flex-row justify-between items-start mb-12">
-        <h2 className="text-4xl font-serif mb-4 md:mb-0 text-green-800">Why Choose Our Platform?</h2>
+        <h2 className="text-4xl font-serif mb-4 md:mb-0 text-[#035527]">Why Choose Our Platform?</h2>
         <div className="grid grid-cols-2 md:grid-cols-3 gap-4 w-full md:w-auto">
           {[
             { icon: Shield, text: "Secure Transactions" },
@@ -17,7 +17,7 @@ export function PlatformFeatures() {
             { icon: Settings, text: "Easy Management" }
           ].map((item, index) => (
             <div key={index} className="flex items-center bg-gray-100 rounded-full px-4 py-2">
-              <item.icon className="w-5 h-5 text-green-800 mr-2" />
+              <item.icon className="w-5 h-5 text-[#035527] mr-2" />
               <span className="text-sm font-semibold text-gray-800">{item.text}</span>
             </div>
           ))}

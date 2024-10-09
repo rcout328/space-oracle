@@ -29,7 +29,7 @@ export function LatestProjects() {
 
   return (
     <div className="container mx-auto px-4 py-16">
-      <h2 className="text-4xl font-serif mb-8 text-green-800">Latest Projects</h2>
+      <h2 className="text-4xl font-serif mb-8 text-[#035527]">Latest Projects</h2>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {bestProperties.map((property) => (
           <div key={property.id} className="relative overflow-hidden rounded-3xl bg-white shadow-lg">
@@ -45,7 +45,7 @@ export function LatestProjects() {
                 <Button
                   size="sm"
                   variant="ghost"
-                  className="bg-yellow-500 text-gray-800 hover:bg-yellow-600">
+                  className="bg-yellow-500 text-gray-800 hover:bg-yellow-500">
                   Learn More <ArrowUpRight className="ml-2 h-4 w-4" />
                 </Button>
               </Link>
@@ -58,7 +58,7 @@ export function LatestProjects() {
           <Button
             size="lg"
             variant="outline"
-            className="bg-green-800 text-white hover:bg-green-900 transition-colors">
+            className="bg-[#035527] text-white hover:bg-[#035527] transition-colors">
             See More Properties <ArrowUpRight className="ml-2 h-5 w-5" />
           </Button>
         </Link>
