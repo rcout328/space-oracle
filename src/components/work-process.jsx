@@ -2,6 +2,7 @@
 
 import { ArrowUpRight, CheckSquare } from 'lucide-react'
 import { Button } from "@/components/ui/button"
+import Link from 'next/link'
 
 export function WorkProcess() {
   return (
@@ -50,10 +51,12 @@ export function WorkProcess() {
                 </div>
               ))}
             </div>
-            <Button className="bg-yellow-500 text-gray-800 hover:bg-yellow-500 rounded-full px-4 py-2 md:px-6 md:py-3 text-sm md:text-base font-semibold w-full md:w-auto">
-              Let&apos;s Start With Us
-              <ArrowUpRight className="ml-2 h-4 w-4 md:h-5 md:w-5" />
-            </Button>
+            <Link href="/proper" passHref>
+              <Button className="bg-yellow-500 text-gray-800 hover:bg-yellow-600 rounded-full px-4 py-2 md:px-6 md:py-3 text-sm md:text-base font-semibold w-full md:w-auto mt-4">
+                Let&apos;s Start With Us
+                <ArrowUpRight className="ml-2 h-4 w-4 md:h-5 md:w-5" />
+              </Button>
+            </Link>
           </div>
         </div>
       </div>

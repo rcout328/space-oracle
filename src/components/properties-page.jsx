@@ -1,6 +1,7 @@
 'use client'
 
 import { useState, useEffect } from "react"
+import { useSearchParams } from 'next/navigation'
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
@@ -12,6 +13,7 @@ import { supabase } from '@/lib/supabaseClient'
 import { Home } from 'lucide-react'  // Import the Home icon
 
 export function PropertiesPageComponent() {
+  const searchParams = useSearchParams()
   const [properties, setProperties] = useState([])
   const [filteredProperties, setFilteredProperties] = useState([])
   const [searchTerm, setSearchTerm] = useState("")
@@ -20,6 +22,10 @@ export function PropertiesPageComponent() {
 
   useEffect(() => {
     fetchProperties()
+    const bhk = searchParams.get('bhk')
+    if (bhk) {
+      setPropertyType(bhk)
+    }
   }, [])
 
   useEffect(() => {
@@ -128,7 +134,27 @@ export function PropertiesPageComponent() {
   );
 }
 
-function PropertyCard({ id, property_name, property_type, location, city, bedrooms, bathrooms, size_sqft, price, image }) {
+function PropertyCard({ id, property_name, property_type, location, city, bedrooms, bathrooms, size_sqft, price, image, visited }) {
+
+  const handleLearnMore = async () => {
+    try {
+      const { data, error } = await supabase
+        .from('properties')
+        .update({ visited: visited + 1 }) // Use the visited prop instead of property.visited
+        .eq('id', id)
+
+      if (error) throw error
+
+      // Set a session storage item to indicate valid access
+      sessionStorage.setItem('validPropertyAccess', id)
+
+      // Navigate to the property details page using Link
+      window.location.href = `/properties/${id}`
+    } catch (error) {
+      console.error('Error updating visited count:', error)
+    }
+  }
+
   return (
     <Card className="overflow-hidden transition-shadow hover:shadow-lg">
       <CardHeader className="p-0">
@@ -152,9 +178,9 @@ function PropertyCard({ id, property_name, property_type, location, city, bedroo
         <p className="text-gray-600 text-sm">{bedrooms} beds • {bathrooms} baths • {size_sqft} sqft</p>
       </CardContent>
       <CardFooter className="p-4">
-        <Link href={`/properties/${id}`} passHref>
-          <Button className="w-full bg-[#035527] text-white hover:bg-[#035527] transition-colors">View Details</Button>
-        </Link>
+        <Button onClick={handleLearnMore} className="w-full bg-[#035527] text-white hover:bg-[#035527] transition-colors">
+          Learn More
+        </Button>
       </CardFooter>
     </Card>
   );

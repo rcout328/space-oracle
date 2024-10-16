@@ -51,15 +51,15 @@ export function AboutUsComponent() {
             </p>
             <ul className="space-y-2 mb-4">
               <li className="flex items-start">
-                <CheckCircle className="mr-2 text-[#C7852F] mt-1" size={16} />
+                <CheckCircle className="mr-2 text-yellow-500 mt-1" size={16} />
                 <span>Personalized property recommendations</span>
               </li>
               <li className="flex items-start">
-                <CheckCircle className="mr-2 text-[#C7852F] mt-1" size={16} />
+                <CheckCircle className="mr-2 text-yellow-500 mt-1" size={16} />
                 <span>Predictive market analysis</span>
               </li>
               <li className="flex items-start">
-                <CheckCircle className="mr-2 text-[#C7852F] mt-1" size={16} />
+                <CheckCircle className="mr-2 text-yellow-500 mt-1" size={16} />
                 <span>Virtual property tours</span>
               </li>
             </ul>

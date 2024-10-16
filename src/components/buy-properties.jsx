@@ -87,7 +87,7 @@ export function BuyPropertiesComponent() {
               <span>-</span>
               <Input type="number" placeholder="Max price" className="bg-white text-black" />
             </div>
-            <Button className="bg-[#C7852F] text-white hover:bg-[#C7852F]">Search Properties</Button>
+            <Button className="bg-yellow-500 text-white hover:bg-yellow-500">Search Properties</Button>
           </div>
         </section>
         
@@ -200,7 +200,7 @@ function PropertyCard({ property }) {
           alt={property.title}
           className="w-full h-48 object-cover" />
         {property.featured && (
-          <span className="absolute top-2 left-2 bg-[#C7852F] text-white px-2 py-1 text-xs font-bold rounded">
+          <span className="absolute top-2 left-2 bg-yellow-500 text-white px-2 py-1 text-xs font-bold rounded">
             Featured
           </span>
         )}
@@ -240,7 +240,7 @@ function PropertyListItem({ property }) {
             alt={property.title}
             className="w-full h-full object-cover" />
           {property.featured && (
-            <span className="absolute top-2 left-2 bg-[#C7852F] text-white px-2 py-1 text-xs font-bold rounded">
+            <span className="absolute top-2 left-2 bg-yellow-500 text-white px-2 py-1 text-xs font-bold rounded">
               Featured
             </span>
           )}

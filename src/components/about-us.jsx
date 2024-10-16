@@ -37,7 +37,7 @@ export function AboutUst() {
           <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
             Space Oracle is a leading real estate company dedicated to helping people find their perfect homes and make smart property investments. With our innovative technology and expert team, we&apos;re revolutionizing the way people buy, sell, and rent properties.
           </p>
-          <Button className="bg-[#C7852F] text-black font-semibold hover:bg-[#035527]">
+          <Button className="bg-yellow-500 text-black font-semibold hover:bg-[#035527]">
             Learn More About Our Mission <ChevronRight className="ml-2 h-5 w-5" />
           </Button>
         </section>
@@ -64,7 +64,7 @@ export function AboutUst() {
             {achievements.map((achievement, index) => (
               <Card key={index}>
                 <CardHeader>
-                  <achievement.icon className="h-12 w-12 text-[#C7852F] mb-4" />
+                  <achievement.icon className="h-12 w-12 text-yellow-500 mb-4" />
                   <CardTitle className="text-4xl font-bold text-[#035527]">{achievement.title}</CardTitle>
                 </CardHeader>
                 <CardContent>
@@ -101,7 +101,7 @@ export function AboutUst() {
           <h2 className="text-3xl font-bold text-[#035527] mb-4">Ready to Find Your Dream Home?</h2>
           <p className="text-xl text-gray-600 mb-8">Let Space Oracle guide you through your real estate journey.</p>
           <Button
-            className="bg-[#C7852F] text-black hover:bg-[#C7852F] font-semibold px-8 py-3">
+            className="bg-yellow-500 text-black hover:bg-yellow-500 font-semibold px-8 py-3">
             Get Started Today
           </Button>
         </section>

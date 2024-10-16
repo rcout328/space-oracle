@@ -3,7 +3,7 @@
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
 import { Button } from "@/components/ui/button"
-import { ArrowUpRight } from "lucide-react"
+import { ArrowRight, ArrowUpRight } from "lucide-react"
 import { PlatformFeatures } from '@/components/platform-features'
 import { WorkProcess } from '@/components/work-process'
 import { PropertyListings } from '@/components/property-listings'
@@ -102,6 +102,16 @@ export function HomePage() {
           ))}
         </div>
         
+        <div className="flex justify-center mt-10">
+         <Link href="/proper" className="bg-yellow-500 text-black hover:bg-yellow-700 flex items-center">
+         <Button 
+            className="bg-yellow-500 text-black hover:bg-yellow-700 flex items-center"
+            onClick={() => {/* Logic to show more properties */}}
+          >
+            Show More Properties <ArrowRight className="ml-2 h-4 w-4" />
+          </Button></Link>
+        </div>
+
         <PlatformFeatures />
      
         <WorkProcess />
